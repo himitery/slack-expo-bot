@@ -26,7 +26,7 @@ func SendMessage(message Message) {
 		slackSdk.MsgOptionAttachments(attachment),
 	)
 	if err != nil {
-		log.Fatalf("[SendMessage Error] %s\n", err)
+		log.Printf("[SendMessage Error] %s\n", err)
 		return
 	}
 }
