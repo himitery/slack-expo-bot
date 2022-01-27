@@ -1,10 +1,11 @@
 FROM golang
 
 WORKDIR /app
-COPY . .
+COPY . ./app
 
 RUN go mod download
+RUN go build main.go
 
 EXPOSE 3000
 
-CMD ["go", "run", "main.go"]
+CMD ["go", "./main"]

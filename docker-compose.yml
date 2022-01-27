@@ -3,3 +3,11 @@ version: '3.7'
 services:
   app:
     build: .
+    ports:
+      - "3000:3000"
+    networks:
+      - expo_slack_bot
+
+networks:
+  expo_slack_bot:
+    name: expo_slack_bot
